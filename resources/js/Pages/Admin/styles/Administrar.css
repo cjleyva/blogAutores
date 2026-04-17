@@ -1,0 +1,483 @@
+.panel-admin {
+    padding: 1rem 0;
+}
+
+.panel-admin h1 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .panel-admin {
+        padding: 1.5rem 0;
+    }
+    .panel-admin h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.grid-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-panel {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+.tarjeta {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tarjeta.ancho-completo {
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .tarjeta.ancho-completo {
+        grid-column: span 2;
+    }
+}
+
+.tarjeta h2 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.formulario-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+    .formulario-inline {
+        flex-direction: row;
+    }
+}
+
+.formulario-inline input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.formulario-vertical input,
+.formulario-vertical textarea,
+.formulario-vertical select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.formulario-vertical textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.campo-imagen {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.campo-imagen input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.btn-imagen {
+    background: #f59e0b;
+    white-space: nowrap;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+}
+
+.btn-imagen:hover {
+    background: #d97706;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+@media (min-width: 480px) {
+    button {
+        width: auto;
+        padding: 0.5rem 1rem;
+    }
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    filter: brightness(105%);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.lista {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.item {
+    background: #f8fafc;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.badge {
+    background: #1e293b;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.65rem;
+}
+
+.lista-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-post {
+    background: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .item-post {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.info-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-post strong {
+    font-size: 0.85rem;
+}
+
+.info-post small {
+    font-size: 0.65rem;
+    color: #64748b;
+}
+
+.acciones {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+    width: auto;
+}
+
+.btn-editar {
+    background: #3b82f6;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+}
+
+.sin-posts {
+    text-align: center;
+    padding: 1.5rem;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+.bonus {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.bonus h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-ideas {
+    background: white;
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@media (min-width: 480px) {
+    .btn-ideas {
+        width: auto;
+        min-width: 150px;
+    }
+}
+
+.grid-ideas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .grid-ideas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.tarjeta-idea {
+    background: white;
+    color: #1e293b;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tarjeta-idea:hover {
+    transform: translateY(-2px);
+}
+
+.tarjeta-idea h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+.tarjeta-idea p {
+    font-size: 0.7rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-usar {
+    background: #10b981;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.35rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.btn-usar:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.fa-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .contenedor {
+        padding: 0 0.75rem;
+    }
+    .panel-admin h1 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    .tarjeta {
+        padding: 0.75rem;
+    }
+    .tarjeta h2 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    .formulario-inline {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .formulario-inline input,
+    .formulario-vertical input,
+    .formulario-vertical textarea,
+    .formulario-vertical select {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+    .campo-imagen {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .btn-imagen {
+        width: 100%;
+        justify-content: center;
+    }
+    button {
+        width: 100%;
+        justify-content: center;
+    }
+    .grid-panel {
+        gap: 0.75rem;
+    }
+    .item-post {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .acciones {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .btn-editar, .btn-eliminar {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.65rem;
+    }
+    .item {
+        font-size: 0.7rem;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    .badge {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.4rem;
+    }
+    .bonus {
+        padding: 0.75rem;
+    }
+    .bonus h3 {
+        font-size: 0.9rem;
+    }
+    .grid-ideas {
+        gap: 0.5rem;
+    }
+    .tarjeta-idea {
+        padding: 0.6rem;
+    }
+    .tarjeta-idea h4 {
+        font-size: 0.75rem;
+    }
+    .tarjeta-idea p {
+        font-size: 0.65rem;
+    }
+    .btn-usar {
+        font-size: 0.65rem;
+        padding: 0.3rem;
+    }
+    select {
+        font-size: 0.75rem;
+        padding: 0.4rem;
+    }
+    select option {
+        white-space: normal;
+        word-break: break-word;
+        font-size: 0.7rem;
+        padding: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bonus {
+        padding: 0.6rem;
+    }
+    .grid-ideas {
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-idea {
+        padding: 0.5rem;
+    }
+    .tarjeta-idea h4 {
+        font-size: 0.7rem;
+    }
+    .tarjeta-idea p {
+        font-size: 0.6rem;
+    }
+    .btn-usar {
+        font-size: 0.6rem;
+        padding: 0.25rem;
+    }
+}
